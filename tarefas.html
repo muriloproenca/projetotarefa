@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="atualizarpagina.js"></script>
+    <style>
+        .tarefa {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Adicione um link para a página home.html ao redor do texto "Tarefas" -->
+            <a class="navbar-brand" href="home.html">Tarefas</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="input-group mb-4 input-group-lg">
+            <input id="nova" type="text" class="form-control " placeholder="Insira uma tarefa"/>
+            <button onclick="adicionar()" class="btn btn-outline-secondary">Adicionar</button>  
+            <div class="invalid-feedback">
+                Insira uma tarefa
+            </div>
+        </div>
+        <ul id="lista" class="list-group">
+            <li class="list-group-item tarefa">
+                <input class="form-check-input me-1" type="checkbox" value="feito" checked="true">
+                <label class="form-check-label">Acordar</label>
+            </li>
+            <li class="list-group-item">Lavar Louça</li>
+            <li class="list-group-item">Estudar</li>
+        </ul>
+    </div>
+    <script src="addtarefas.js"></script>
+</body>
+</html>
